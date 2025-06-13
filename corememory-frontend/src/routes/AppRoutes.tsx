@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
-import BackgroundWrapper from "../components/UI/BackgroundWrapper";
+import BackgroundWrapper from "../components/ui/BackgroundWrapper";
 import LandingPage from "../pages/GENERAL/LandingPage";
 import LogInPage from "../pages/GENERAL/LogInPage";
 import SignupPage from "../pages/GENERAL/SignupPage";

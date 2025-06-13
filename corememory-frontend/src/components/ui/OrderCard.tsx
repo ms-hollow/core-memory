@@ -17,7 +17,7 @@ const statusInfo = {
         icon: "/icons/in-transit.svg",
         message: "Your parcel has been picked up by the courier.",
     },
-    "Delivered": {
+    Delivered: {
         icon: "/icons/completed.svg",
         message: "Your package has been delivered.",
     },

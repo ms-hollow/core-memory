@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import UserHeader from "../../components/USERS/UserHeader";
 import { IoMdSearch } from "react-icons/io";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
-import OrderCard from "../../components/UI/OrderCard";
+import OrderCard from "../../components/ui/OrderCard";
 import { getUserOrders } from "../../apis/orderApis";
 import { useAuth } from "../../context/AuthContext";
 import { Order } from "../../types/orderTypes";

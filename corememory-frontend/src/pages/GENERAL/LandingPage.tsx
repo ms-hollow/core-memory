@@ -2,7 +2,7 @@ import { FaArrowRight } from "react-icons/fa6";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
-import LandingBackground from "../../components/UI/LandingBackground";
+import LandingBackground from "../../components/ui/LandingBackground";
 
 const LandingPage = () => {
   const navigate = useNavigate();
