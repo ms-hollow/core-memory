@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { FaArrowLeft } from "react-icons/fa";
-import CustomStepper from "../../components/UI/CustomStepper";
+import CustomStepper from "../../components/ui/CustomStepper";
 import UserUpload from "../../components/USERS/UserUpload";
 import UserPurchaseDetails from "../../components/USERS/UserPurchaseDetails";
 

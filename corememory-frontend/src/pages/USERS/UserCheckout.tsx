@@ -4,10 +4,10 @@ import { useAuth } from "../../context/AuthContext";
 import { getOrderDetailById } from "../../apis/order-detailApis";
 import { getOrderById, deleteOrderById, updateOrder } from "../../apis/orderApis";
 
-import PaymentMethodSelector from "../../components/UI/PaymentMethodSelector";
-import CardPaymentInfo from "../../components/UI/CardPaymentInfo";
-import ProductList from "../../components/UI/ProductList";
-import TotalPriceDetails from "../../components/UI/TotalPriceDetails";
+import PaymentMethodSelector from "../../components/ui/PaymentMethodSelector";
+import CardPaymentInfo from "../../components/ui/CardPaymentInfo";
+import ProductList from "../../components/ui/ProductList";
+import TotalPriceDetails from "../../components/ui/TotalPriceDetails";
 
 const paymentMethodMap: Record<"card" | "gcash" | "paypal", number> = {
     card: 1,

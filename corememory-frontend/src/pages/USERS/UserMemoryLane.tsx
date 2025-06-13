@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import UserHeader from "../../components/USERS/UserHeader";
 import { useAuth } from "../../context/AuthContext";
 import { getCoreMemory } from "../../apis/corememoryApi";
-import QRCodeModal from "../../components/UI/CoreMemoryQRModal";
+import QRCodeModal from "../../components/ui/CoreMemoryQRModal";
 
 interface CoreMemoryItem {
     id: number;

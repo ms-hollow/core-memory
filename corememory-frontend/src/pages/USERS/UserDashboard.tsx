@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import UserHeader from "../../components/USERS/UserHeader";
-import StarRating from "../../components/UI/StarRating";
-import CreateCoreMemory from "../../components/UI/CreateCoreMemory";
+import StarRating from "../../components/ui/StarRating";
+import CreateCoreMemory from "../../components/ui/CreateCoreMemory";
 import { useAuth } from "../../context/AuthContext";
 import { getProduct } from "../../apis/productApis";
 import { Product } from "../../types/orderTypes";
