@@ -1,0 +1,83 @@
+//! Note: Pwede i-override ang mga variables na nasa text sa ibang file (e.g gusto niyo ng ibang font family/size sa ibang module)
+
+// Font families
+$font-inter: 'Inter', sans-serif
+$font-inter-tight: 'Inter Tight', sans-serif
+$font-rubik: 'Rubik', sans-serif
+
+// Font weights
+$weight-light: 300
+$weight-regular: 400
+$weight-medium: 500
+$weight-semibold: 600
+$weight-bold: 700
+$weight-extrabold: 800
+
+//BASED SA FIGMA DESIGN ANG LINE HEIGHTS AND SPACING
+// Letter spacing
+$spacing-small: -5%
+$spacing-medium: -3%
+$spacing-none: 0%
+
+// Line heights
+$line-100: 100%
+$line-115: 115%
+$line-110: 110%
+$line-122: 122%
+$line-81: 81%
+$line-0: 0%
+
+// Typography mixin — makes it easy to reuse and tweak styles
+@mixin text-style($family, $weight, $line-height, $spacing, $font-size: 1rem)
+    font-family: $family
+    font-weight: $weight
+    line-height: $line-height
+    letter-spacing: $spacing
+    font-size: $font-size
+
+// Title
+.title-text
+    @include text-style($font-inter, $weight-bold, $line-81, $spacing-small, 4.6rem)
+
+// Special text
+.special-text
+    @include text-style($font-inter-tight, $weight-semibold, $line-100, $spacing-small, 1.37125rem)
+
+.getStarted-text
+    @include text-style($font-inter, $weight-semibold, $line-0, $spacing-none, 1.25rem)
+
+// Headings
+.heading
+    @include text-style($font-inter-tight, $weight-bold, $line-100, $spacing-medium, 3rem)
+
+.heading-1
+    @include text-style($font-rubik, $weight-semibold, $line-100, $spacing-medium, 2.21rem) //41.25px
+
+.heading-2
+    @include text-style($font-rubik, $weight-semibold, $line-100, $spacing-medium, 1.4rem) //23.07px
+
+.heading-3
+    @include text-style($font-inter, $weight-semibold, $line-100, $spacing-medium, 1.22rem) //19.61px
+
+.heading-4
+    @include text-style($font-inter, $weight-semibold, $line-100, $spacing-medium, 1.08rem) //17.31px
+
+.heading-5
+    @include text-style($font-inter, $weight-semibold, $line-0, $spacing-small, 0.865rem)
+
+// Form text
+.form-label
+    @include text-style($font-inter, $weight-light, $line-122, $spacing-medium, 1.15rem)
+
+.form-text
+    @include text-style($font-rubik, $weight-regular, $line-100, $spacing-medium, 1.30rem)
+
+.body-5
+    @include text-style($font-inter, $weight-light, $line-122, $spacing-medium, 1rem)
+
+.nav-menu
+    @include text-style($font-inter-tight, $weight-semibold, $line-100, $spacing-none, 1rem)
+
+.product-description
+    @include text-style($font-inter, $weight-regular, $line-115, $spacing-none, 1.041rem)
+

@@ -1,0 +1,94 @@
+@use '../1-helpers/variables' as v
+@use '../3-basics/typography' as t
+
+.purchaseDetails
+    display: flex
+    flex-direction: column
+    margin-top: 2.031rem // 32.49px
+
+    img
+        width: 26.318rem // 421.08px
+        height: 12.872rem // 205.92px
+
+    &__variants
+        display: flex
+        flex-direction: row
+        margin-top: 1.559rem // 24.94px
+
+        .product
+            display: flex
+            flex-direction: row
+            gap: 0.391rem // 6.25px
+            align-items: center
+            border: 0.017rem solid #1E1E1E // 0.27px
+            border-radius: 0.811rem // 12.95px
+            padding: 0.112rem // 1.79px
+            cursor: pointer
+            margin-right: 0.391rem // 6.25px
+
+            &__color
+                width: 1.375rem // 22px
+                height: 1.375rem // 22px
+                border-radius: 50%
+
+            p
+                margin: 0
+                font-family: t.$font-inter-tight
+                font-size: 0.885rem // 14.16px
+                font-weight: t.$weight-semibold
+                padding-right: 0.405rem // 6.48px
+                transition: opacity 0.3s ease-in-out
+
+    h1
+        width: 6.125rem // 98px
+        font-family: t.$font-inter-tight
+        font-size: 1.114rem // 17.83px
+        font-weight: t.$weight-semibold
+        text-align: left
+        margin: 0
+
+    &__quantity
+        display: flex
+        flex-direction: row
+        margin-top: 0.943rem // 15.08px
+        align-items: center
+
+        .quantityField
+            display: flex
+            flex-direction: row
+            align-items: center
+            
+            input
+                width: 3.021rem // 48.37px
+                height: 1.844rem // 29.49px
+                background: #FFFFFF
+                border: 0.037rem solid #737373 // 0.59px
+                border-left: none
+                border-right: none
+                font-family: t.$font-inter-tight
+                font-size: 1.031rem // 16.49px
+                font-weight: t.$weight-bold
+                color: #1E1E1E
+                padding: 0
+                text-align: center
+
+                &:focus
+                    border: 0.037rem solid #737373 // 0.59px
+                    border-left: none
+                    border-right: none
+                    outline: #737373
+
+                &::-webkit-outer-spin-button,
+                &::-webkit-inner-spin-button
+                    -webkit-appearance: none
+                    margin: 0
+
+            button
+                width: 2.138rem // 34.21px
+                height: 1.956rem // 31.3px
+                border: 0.037rem solid #737373 // 0.59px
+                background: #F9F8F7
+                font-family: t.$font-inter-tight
+                font-size: 1.031rem // 16.49px
+                font-weight: t.$weight-medium
+                cursor: pointer

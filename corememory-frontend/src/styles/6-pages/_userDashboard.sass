@@ -1,0 +1,124 @@
+@use '../1-helpers/variables' as v
+@use '../3-basics/typography' as t
+
+.product-card 
+    display: flex
+    gap: 3rem
+    align-items: flex-start
+    padding: 2rem
+    margin-top: 6.125rem
+    // border: 1px solid v.$red; // Guide line
+    
+    &__image 
+        width: 473px
+        height: 499px
+        border-radius: 1rem
+
+    &__info 
+        flex: 1
+
+        .title 
+            @extend .heading
+            font-weight: bold
+            margin-bottom: 0.2rem
+
+        .rating 
+            display: flex
+            align-items: center
+            gap: 0.5rem
+        
+        .star-rating  
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            font-size: 1rem; 
+
+            .star  
+                transition: color 0.3s ease;
+            
+
+            .filled  
+                color: v.$accent-yellow-1
+            
+
+            .half-filled 
+                color: v.$accent-yellow-1
+            
+
+            .empty  
+                color: v.$accent-yellow-1
+            
+
+            .rating-number  
+                @extend .heading-5
+                font-weight: 500
+                margin-left: 8px
+                color: black
+
+        .description-container 
+            width: 500px
+            max-width: 100%
+            margin-top: 2.5rem
+            // border: 1px solid v.$red; // Guide line
+            
+            .description 
+                @extend .product-description
+                color: v.$black
+                white-space: normal; 
+                word-wrap: break-word; 
+                overflow-wrap: break-word; 
+
+        .variant-title
+            @extend .heading-4
+            color: v.$black
+            margin-top: 1.3rem
+
+        .variant-options 
+            display: flex
+            gap: 8px
+            margin-top: 10px
+
+            .variant 
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+                border: 1px solid black;
+                background: v.$white
+                position: relative;
+
+                .circle 
+                    width: 25px;
+                    height: 25px;
+                    border-radius: 50%;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    color: v.$gray-light
+
+        .cta-button  
+            width: 100%
+            max-width: 15.5rem
+            height: 3rem
+            margin-top: 2.5rem
+            border-radius: 2.52rem
+            border: 1.15px solid v.$black
+            background-color: v.$accent-yellow-1
+            cursor: pointer
+            box-shadow: 4px 5px 0 v.$black
+
+            &__text
+                @extend .heading-4
+                color: v.$white
+                font: t.$font-rubik
+                font-size: 1rem
+    
+@media (max-width: 576px)
+
+@media (min-width: 577px) and (max-width: 768px) // Tablet (Small)
+
+@media (min-width: 769px) and (max-width: 1024px) // Tablet (Large) / Small Laptops
+
+@media (min-width: 1441px) and (min-height: 735px) // Extra Large Screens (4K & beyond)
+    .product-card 
+        margin-top: 10rem

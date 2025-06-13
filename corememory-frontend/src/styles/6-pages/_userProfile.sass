@@ -1,0 +1,431 @@
+@use '../1-helpers/variables' as v
+@use '../3-basics/typography' as t
+
+.profile-container
+    display: flex
+    width: 100%
+    height: 100vh
+    justify-content: center
+    align-items: center
+
+    .profile-content
+        display: flex
+        flex-direction: column
+        max-width: 879.53px
+        width: 100%
+        height: auto
+        max-height: 598px
+
+        .profile-solid-line
+            display: flex      
+            width: 100%
+            border: 0.5px solid #E2E2E2
+            margin: 1.5rem 0
+            justify-content: center
+            align-items: center
+
+    .profile-header
+        display: flex
+        align-items: center
+        margin-left: 0
+        margin-bottom: 1rem
+        gap: 0.5rem
+
+    .profile-header-text
+        @extend .heading-3
+        font: t.$font-inter
+        font-weight: 700
+        font-size: 23.98px
+
+    .profile-back-icon
+        font-size: 2rem
+        cursor: pointer
+    
+    .profile-banner-container
+        display: flex
+        justify-content: center
+        margin-bottom: 1rem
+
+        .profile-banner-contents
+            display: flex
+            width: 100%
+            max-width: 879.53px
+            height: 74.75px
+            justify-content: space-between
+            align-items: center
+            padding: 1rem 1.5rem
+            background: #CD1F21
+            border-radius: 1rem
+
+            .profile-banner-text
+                @extend .heading-5
+                font: t.$font-inter-tight
+                font-weight: 800
+                font-size: 23.42px
+                color: #FFDF3C
+                line-height: 1.4rem
+
+            .profile-membership-price
+                display: flex
+                align-items: center
+                justify-content: center
+                padding: 1rem 
+                width: 100%
+                max-width: 228px
+                height: 45.32px
+                background: #1E7EBA
+                border-radius: 5rem
+                @extend .heading-5
+                font: t.$font-inter-tight
+                font-weight: 900
+                font-size: 13.96px
+                color: v.$white
+    
+            .profile-membership-button
+                font-size: 1.89rem
+                color: v.$white
+                cursor: pointer
+
+    .profile-info-container
+        display: flex
+        justify-content: space-between
+        align-items: center
+        padding: 2rem 1.5rem
+        width: 100%
+        max-width: 879.53px
+        height: 100%
+        max-height: 87.54px
+        border: 1px solid v.$gray-dark
+        border-radius: 1rem
+        background: #EFEFEF
+
+        .profile-imageText-wrapper
+            display: flex
+            justify-content: left
+            align-items: center
+            gap: 1.5rem
+
+        .profile-image
+            width: 60px
+            height: 60px
+            border-radius: 50%
+
+        .profile-text-wrapper
+            display: flex
+            flex-direction: column
+            gap: 1rem
+
+            .profile-info-name
+                @extend .heading-5
+                font: t.$font-inter-tight
+                font-weight: 700
+                font-size: 22.11px
+            
+            .profile-membership-status
+                display: flex
+                align-items: center
+                justify-content: left
+
+                .member 
+                    display: flex
+                    align-items: center
+                    justify-content: center
+                    width: 100%
+                    max-width: 80px
+                    height: 16px
+                    border-radius: 1rem
+                    @extend .heading-5
+                    font: t.$font-inter-tight
+                    font-weight: 600
+                    font-size: 10px
+                    border: 1px solid #E56312
+                    color: #E56312
+                
+                .regular 
+                    display: flex
+                    align-items: center
+                    justify-content: center
+                    width: 100%
+                    max-width: 100px
+                    height: 16px
+                    border-radius: 1rem
+                    @extend .heading-5
+                    font: t.$font-inter-tight
+                    font-weight: 600
+                    font-size: 10px
+                    border: 1px solid v.$gray-light
+                    color: v.$gray-light
+                    
+        .profile-edit-btn
+            display: flex
+            justify-content: center
+            align-items: center
+            width: 108.55px
+            height: 28.82px
+            border-radius: 1rem
+            border: none
+            background: #D9D9D9
+            color: v.$gray-dark
+            @extend .heading-5
+            font: t.$font-inter-tight
+            font-size: 10.78px
+            font-weight: 500
+            cursor: pointer
+            margin-left: 0
+    
+    .profile-form-label
+        @extend .heading-5
+        font: t.$font-inter-tight
+        font-weight: 500
+        font-size: 12.44px
+        margin: 1rem 
+
+    .profile-input
+        font: 500 16.1px 'Inter Tight', sans-serif;
+        color: v.$gray-medium
+        width: 100%
+        height: 42.50px
+        border-radius: 1rem
+        background: #EFEFEF
+        padding: 1rem
+        border: none
+        box-sizing: border-box  
+    
+    .contact-inputField
+        font: 500 16.1px 'Inter Tight', sans-serif !important
+        color: v.$gray-medium !important
+        width: 100% !important
+        height: 42.5px !important
+        border-radius: 1rem !important
+        background: #EFEFEF !important
+        padding: 1rem 3rem !important
+        border: none !important
+        box-sizing: border-box !important
+    
+    .location-input
+        display: flex
+        font: 500 16.1px 'Inter Tight', sans-serif
+        color: v.$gray-medium
+        width: 100%
+        height: 42.5px
+        border-radius: 1rem
+        background: #EFEFEF
+        padding: 0 1.5rem
+        border: none
+        box-sizing: border-box
+        overflow-y: auto
+
+    .location-select
+        font: 500 13px 'Inter Tight', sans-serif
+        color: v.$gray-medium
+        background: #EFEFEF
+        border: none
+        width: 100%
+
+    .contact-input-button
+        background-color: #EFEFEF
+        border: none 
+        border-radius: 1rem
+        padding: 0.7rem
+        cursor: pointer
+        display: flex
+        align-items: center
+        justify-content: center
+
+        &:hover
+            background-color: #ddd
+
+
+    .profile-form-name-part,
+    .profile-form-birthdateContact-part,
+    .profile-form-cityRegion-part
+        display: flex
+        justify-content: space-between
+        gap: 1rem
+        width: 100%
+
+
+    .profile-form-firstName-part,
+    .profile-form-lastName-part,
+    .profile-form-username-part,
+    .profile-form-birthdate-part,
+    .profile-form-contactNumber-part,
+    .profile-form-address-part,
+    .profile-form-city-part,
+    .profile-form-region-part,
+    .profile-form-postalCode-part
+        display: flex
+        flex-direction: column
+        width: 100%
+
+    .edit-profile-header
+        display: flex
+        align-items: center
+        margin-left: 0
+        margin-bottom: 3rem
+        gap: 0.5rem
+    
+    .edit-profile-info-container
+        display: flex
+        justify-content: space-between
+        align-items: center
+        padding: 2rem 1.5rem
+        width: 100%
+        max-width: 631.48px
+        height: 100%
+        max-height: 87.54px
+        border-radius: 1rem
+        background: transparent
+
+        .edit-profile-imageText-wrapper
+            display: flex
+            justify-content: left
+            align-items: center
+            gap: 1.5rem
+        
+            .edit-profile-image
+                width: 100px
+                height: 100px
+                border-radius: 50%
+
+            .edit-profile-text-wrapper
+                display: flex
+                flex-direction: column
+                gap: 1rem
+
+                .edit-profile-info-name
+                    @extend .heading-5
+                    font: t.$font-inter-tight
+                    font-weight: 700
+                    font-size: 22.11px
+
+                .edit-profile-membership-status
+                    display: flex
+                    align-items: center
+                    justify-content: flex-start
+                    gap: 0.5rem
+
+                    .edit-member
+                        display: flex
+                        align-items: center
+                        justify-content: center
+                        height: 16px
+                        padding: 0 0.5rem
+                        border-radius: 1rem
+                        font-family: 'Inter', sans-serif
+                        font-weight: 600
+                        font-size: 10px
+                        border: 1px solid #E56312
+                        color: #E56312
+                        background-color: transparent
+
+                    .edit-regular
+                        display: flex
+                        align-items: center
+                        justify-content: center
+                        height: 16px
+                        padding: 0 0.5rem
+                        border-radius: 1rem
+                        font-family: 'Inter', sans-serif
+                        font-weight: 600
+                        font-size: 10px
+                        border: 1px solid #737373
+                        color: #737373
+                        background-color: transparent
+
+        .edit-profile-image-wrapper
+            position: relative
+            display: inline-block
+            cursor: pointer
+            justify-content: center
+            align-items: center 
+
+            .edit-profile-image
+                width: 100px
+                height: 100px
+                border-radius: 50%
+                object-fit: cover
+
+            .camera-icon-wrapper
+                position: absolute
+                top: 49%
+                left: 50%
+                transform: translate(-50%, -50%) 
+                background-color: rgba(0, 0, 0, 0.2)
+                border-radius: 50%
+                width: 100px  
+                height: 100px
+                display: flex
+                justify-content: center
+                align-items: center
+                padding: 0 
+
+                .camera-icon
+                    font-size: 60px  
+                    color: white
+
+    .edit-btn-wrapper
+        display: flex
+        justify-content: flex-end
+        margin-top: 3rem
+      
+        .edit-profile-save-changes-btn
+            display: flex
+            justify-content: center
+            align-items: center
+            width: 195px
+            height: 40.93px
+            border-radius: 5rem
+            border: 1px solid v.$gray-dark
+            background: #EABD08
+            color: v.$white
+            @extend .heading-5
+            font: t.$font-inter-tight
+            font-size: 15.83px
+            font-weight: 700
+            cursor: pointer
+
+.membership-modal-container
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background: rgba(0, 0, 0, 0.6)
+    display: flex
+    justify-content: center
+    align-items: center
+    z-index: 9999
+
+    .membership-modal-wrapper
+        z-index: 1001
+        display: flex
+        align-items: center
+        justify-content: space-between
+        background: #CD1F21
+        width: 100%
+        max-width: 827px
+        height: 337.11px
+        border-radius: 23.83px
+        padding: 4rem
+
+        .membership-modal-info-wrapper
+            display: flex
+            flex-direction: column
+            gap: 1.5rem
+            z-index: 1001
+
+            .membership-modal-text
+                font: 800 27.47px 'Inter Tight', sans-serif;
+                color: #FFDF3C
+                line-height: 2rem
+
+            .membership-modal-button
+                width: 100%
+                max-width: 234.54px
+                height: 46.27px
+                background: #1E7EBA
+                border-radius: 24.74px
+                border: none
+                font: 900 15.19px 'Inter Tight', sans-serif;
+                color: v.$white

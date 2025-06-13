@@ -1,0 +1,22 @@
+@use '../1-helpers/variables' as v
+@use '../3-basics/typography' as t
+
+.totalPriceDetails
+    display: flex
+    flex-direction: column
+    gap: 1.26rem
+    margin-top: 1.45rem
+
+    div
+        display: flex
+        justify-content: space-between
+
+    p
+        font-family: t.$font-inter-tight
+        font-weight: t.$weight-medium
+        font-size: 0.6rem
+        margin: 0
+
+    .total p
+        font-weight: t.$weight-bold
+        font-size: 0.83rem

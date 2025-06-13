@@ -1,0 +1,81 @@
+@use '../1-helpers/variables' as v
+@use '../3-basics/typography' as t
+
+.uploadForm
+    display: flex
+    flex-direction: column
+    gap: 0.66rem
+    width: 26.37rem
+    margin-top: 2.03rem
+
+    &__button
+        display: flex
+        gap: 0.66rem
+        justify-content: center
+        
+        button
+            width: 12.85rem
+            height: 2.78rem
+            background-color: #F9F8F7
+            color: #1E1E1E
+            font-family: t.$font-inter-tight
+            font-size: 0.85rem
+            font-weight: t.$weight-bold
+            border-radius: 0.81rem
+            border: 0.11rem solid #1E1E1E
+            cursor: pointer
+
+            &.active
+                background-color: #1E1E1E
+                color: #F9F8F7
+
+    &__details
+        display: flex
+        flex-direction: column
+        gap: 0.75rem
+        align-items: center
+
+        .selectFile
+            display: flex
+            align-items: center
+            justify-content: center
+            gap: 0.5rem
+            width: 26.37rem
+            height: 4rem
+            background-color: #F9F8F7
+            color: #1E1E1E
+            border: 0.11rem solid #1E1E1E
+            border-radius: 0.96rem
+            font-family: t.$font-inter-tight
+            font-size: 1.1rem
+            font-weight: t.$weight-semibold
+            cursor: pointer
+
+            svg
+                font-size: 1.34rem
+        
+        .inputField, .descField
+            background-color: #F9F8F7
+            color: #1E1E1E
+            font-family: t.$font-inter-tight
+            font-size: 0.9rem
+            font-weight: t.$weight-medium
+            border: 0.06rem solid #1E1E1E
+            border-radius: 0.71rem
+
+            &:focus
+                border-color: #1E1E1E
+                outline: #1E1E1E
+        
+        .inputField
+            width: 24.22rem
+            height: 2.13rem
+            padding: 0 1.07rem
+
+        .descField
+            resize: none
+            width: 24.22rem
+            height: 7.39rem
+            border-width: 0.07rem
+            border-radius: 0.81rem
+            padding: 0.66rem 0.96rem

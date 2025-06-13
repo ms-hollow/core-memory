@@ -1,0 +1,42 @@
+@use '../1-helpers/variables' as v
+
+.Toastify__toast--success .Toastify__toast-icon,
+.Toastify__toast--error .Toastify__toast-icon,
+.Toastify__toast--warning .Toastify__toast-icon,
+.Toastify__toast--info .Toastify__toast-icon 
+    display: none;
+
+.Toastify__toast--success, Toastify__toast--error, Toastify__toast--warning, .Toastify__toast--info
+    font: 500 15.19px 'Inter Tight', sans-serif;
+    align-items: center
+    justify-content: center
+
+.Toastify__toast--success 
+    background-color: #84D632
+    color: v.$gray-dark
+    border-radius: 12px
+    font-size: 16px
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2)
+    display: flex
+
+.Toastify__toast--error 
+    background-color: #D20404
+    color: white
+    border-radius: 12px
+    padding: 12px 20px
+    font-size: 16px
+
+.Toastify__toast--warning
+    background-color: #EEB108
+    color: white
+    border-radius: 12px
+    padding: 12px 20px
+    font-size: 16px
+
+.Toastify__toast--info
+    background-color: #2B65FB
+    color: white
+    border-radius: 12px
+    padding: 12px 20px
+    font-size: 16px
+

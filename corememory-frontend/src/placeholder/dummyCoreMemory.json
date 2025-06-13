@@ -1,0 +1,240 @@
+[
+  {
+    "id": 1,
+    "variant": "#EEB108",
+    "title": "Golden Memories",
+    "description": "A collection of the most valuable moments.",
+    "date": "29-Mar-25"
+  },
+  {
+    "id": 2,
+    "variant": "#2B65FB",
+    "title": "Summer Vacation",
+    "description": "Memories from our trip to the beach.",
+    "date": "11-Mar-25"
+  },
+  {
+    "id": 3,
+    "variant": "#A500DF",
+    "title": "Graduation Day",
+    "description": "The day we achieved our academic goals.",
+    "date": "17-Feb-25"
+  },
+  {
+    "id": 4,
+    "variant": "#84D632",
+    "title": "Family Reunion",
+    "description": "A joyful gathering with loved ones.",
+    "date": "05-Jan-25"
+  },
+  {
+    "id": 5,
+    "variant": "#D20404",
+    "title": "Mountain Hike",
+    "description": "Reaching the peak was an unforgettable moment.",
+    "date": "21-Dec-24"
+  },
+  {
+    "id": 6,
+    "variant": "#A500DF",
+    "title": "First Job",
+    "description": "The first step into the professional world.",
+    "date": "10-Nov-24"
+  },
+  {
+    "id": 7,
+    "variant": "#2B65FB",
+    "title": "Beach Trip",
+    "description": "Sandy toes and ocean waves.",
+    "date": "02-Oct-24"
+  },
+  {
+    "id": 8,
+    "variant": "#D20404",
+    "title": "Concert Night",
+    "description": "The best live music experience!",
+    "date": "14-Sep-24"
+  },
+  {
+    "id": 9,
+    "variant": "#EEB108",
+    "title": "Camping Adventure",
+    "description": "Stargazing and bonfire stories.",
+    "date": "28-Aug-24"
+  },
+  {
+    "id": 10,
+    "variant": "#2B65FB",
+    "title": "Birthday Bash",
+    "description": "A surprise party to remember.",
+    "date": "05-Jul-24"
+  },
+  {
+    "id": 11,
+    "variant": "#A500DF",
+    "title": "Road Trip",
+    "description": "Exploring new places with friends.",
+    "date": "12-Jun-24"
+  },
+  {
+    "id": 12,
+    "variant": "#84D632",
+    "title": "First Love",
+    "description": "A special chapter in my life.",
+    "date": "20-May-24"
+  },
+  {
+    "id": 13,
+    "variant": "#EEB108",
+    "title": "Prom Night",
+    "description": "A magical evening full of dance and fun.",
+    "date": "29-Apr-24"
+  },
+  {
+    "id": 14,
+    "variant": "#D20404",
+    "title": "New Year's Eve",
+    "description": "Welcoming the new year with fireworks.",
+    "date": "31-Dec-23"
+  },
+  {
+    "id": 15,
+    "variant": "#EEB108",
+    "title": "Thanksgiving Dinner",
+    "description": "A night of gratitude and family time.",
+    "date": "23-Nov-23"
+  },
+  {
+    "id": 16,
+    "variant": "#84D632",
+    "title": "Halloween Party",
+    "description": "Spooky costumes and lots of candy.",
+    "date": "31-Oct-23"
+  },
+  {
+    "id": 17,
+    "variant": "#2B65FB",
+    "title": "Underwater Diving",
+    "description": "Discovering marine life was surreal.",
+    "date": "09-Sep-23"
+  },
+  {
+    "id": 18,
+    "variant": "#A500DF",
+    "title": "Photography Exhibit",
+    "description": "Showcasing my best clicks to the world.",
+    "date": "17-Aug-23"
+  },
+  {
+    "id": 19,
+    "variant": "#84D632",
+    "title": "Backpacking Europe",
+    "description": "An unforgettable solo journey.",
+    "date": "05-Jul-23"
+  },
+  {
+    "id": 20,
+    "variant": "#D20404",
+    "title": "Skydiving",
+    "description": "The most thrilling experience of my life!",
+    "date": "10-Jun-23"
+  },
+  {
+    "id": 21,
+    "variant": "#A500DF",
+    "title": "Cooking Class",
+    "description": "Learning to make gourmet dishes.",
+    "date": "22-May-23"
+  },
+  {
+    "id": 22,
+    "variant": "#EEB108",
+    "title": "Rock Climbing",
+    "description": "Testing my endurance and strength.",
+    "date": "15-Apr-23"
+  },
+  {
+    "id": 23,
+    "variant": "#84D632",
+    "title": "Wedding Day",
+    "description": "The most beautiful day of my life.",
+    "date": "30-Mar-23"
+  },
+  {
+    "id": 24,
+    "variant": "#A500DF",
+    "title": "Art Exhibition",
+    "description": "Showcasing creativity and passion.",
+    "date": "12-Feb-23"
+  },
+  {
+    "id": 25,
+    "variant": "#2B65FB",
+    "title": "Trekking Adventure",
+    "description": "Hiking through breathtaking landscapes.",
+    "date": "27-Jan-23"
+  },
+  {
+    "id": 26,
+    "variant": "#D20404",
+    "title": "Skiing Trip",
+    "description": "Gliding down snowy mountains.",
+    "date": "08-Dec-22"
+  },
+  {
+    "id": 27,
+    "variant": "#EEB108",
+    "title": "Zoo Visit",
+    "description": "A fun day with exotic animals.",
+    "date": "20-Nov-22"
+  },
+  {
+    "id": 28,
+    "variant": "#A500DF",
+    "title": "Karaoke Night",
+    "description": "Singing our hearts out with friends.",
+    "date": "11-Oct-22"
+  },
+  {
+    "id": 29,
+    "variant": "#D20404",
+    "title": "Volunteering",
+    "description": "Helping those in need was fulfilling.",
+    "date": "07-Sep-22"
+  },
+  {
+    "id": 30,
+    "variant": "#84D632",
+    "title": "Amusement Park",
+    "description": "Thrilling rides and cotton candy.",
+    "date": "25-Aug-22"
+  },
+  {
+    "id": 31,
+    "variant": "#D20404",
+    "title": "Boat Ride",
+    "description": "A peaceful cruise on the lake.",
+    "date": "14-Jul-22"
+  },
+  {
+    "id": 32,
+    "variant": "#84D632",
+    "title": "Cherry Blossom Festival",
+    "description": "Nature's beauty at its peak.",
+    "date": "02-Jun-22"
+  },
+  {
+    "id": 33,
+    "variant": "#A500DF",
+    "title": "Theater Play",
+    "description": "A captivating live performance.",
+    "date": "15-May-22"
+  },
+  {
+    "id": 34,
+    "variant": "#D20404",
+    "title": "Fireworks Show",
+    "description": "A night sky filled with colors.",
+    "date": "04-Apr-22"
+  }
+]

@@ -1,0 +1,158 @@
+[
+    {
+        "status": "Order Placed",
+        "expectedDelivery": null,
+        "deliveredDate": null,
+        "product": {
+            "name": "Core Memory Globe 1",
+            "variant": "Joy",
+            "price": 1199,
+            "qty": 5,
+            "image": "/images/default-product.png"
+        }
+    },
+    {
+        "status": "In-Transit",
+        "expectedDelivery": "25 Mar - 26 Mar",
+        "deliveredDate": null,
+        "product": {
+            "name": "Core Memory Globe 2",
+            "variant": "Fear",
+            "price": 899,
+            "qty": 2,
+            "image": "/images/default-product.png"
+        }
+    },
+    {
+        "status": "In-Transit",
+        "expectedDelivery": "28 Mar - 30 Mar",
+        "deliveredDate": null,
+        "product": {
+            "name": "Core Memory Globe",
+            "variant": "Sadness",
+            "price": 999,
+            "qty": 3,
+            "image": "/images/default-product.png"
+        }
+    },
+    {
+        "status": "Order Complete",
+        "expectedDelivery": null,
+        "deliveredDate": "Mar 11",
+        "product": {
+            "name": "Core Memory Globe 3",
+            "variant": "Disgust",
+            "price": 1099,
+            "qty": 1,
+            "image": "/images/default-product.png"
+        }
+    },
+    {
+        "status": "Order Complete",
+        "expectedDelivery": null,
+        "deliveredDate": "Mar 15",
+        "product": {
+            "name": "Core Memory Globe 4",
+            "variant": "Anger",
+            "price": 1199,
+            "qty": 2,
+            "image": "/images/default-product.png"
+        }
+    },
+    {
+        "status": "Order Placed",
+        "expectedDelivery": null,
+        "deliveredDate": null,
+        "product": {
+            "name": "Core Memory Globe 5",
+            "variant": "Joy",
+            "price": 1199,
+            "qty": 5,
+            "image": "/images/default-product.png"
+        }
+    },
+    {
+        "status": "In-Transit",
+        "expectedDelivery": "25 Mar - 26 Mar",
+        "deliveredDate": null,
+        "product": {
+            "name": "Core Memory Globe 6",
+            "variant": "Fear",
+            "price": 899,
+            "qty": 2,
+            "image": "/images/default-product.png"
+        }
+    },
+    {
+        "status": "In-Transit",
+        "expectedDelivery": "28 Mar - 30 Mar",
+        "deliveredDate": null,
+        "product": {
+            "name": "Core Memory Globe 7",
+            "variant": "Sadness",
+            "price": 999,
+            "qty": 3,
+            "image": "/images/default-product.png"
+        }
+    },
+    {
+        "status": "Order Complete",
+        "expectedDelivery": null,
+        "deliveredDate": "Mar 11",
+        "product": {
+            "name": "Core Memory Globe 8",
+            "variant": "Disgust",
+            "price": 1099,
+            "qty": 1,
+            "image": "/images/default-product.png"
+        }
+    },
+    {
+        "status": "Order Complete",
+        "expectedDelivery": null,
+        "deliveredDate": "Mar 15",
+        "product": {
+            "name": "Core Memory Globe 9",
+            "variant": "Anger",
+            "price": 1199,
+            "qty": 2,
+            "image": "/images/default-product.png"
+        }
+    },
+    {
+        "status": "Order Placed",
+        "expectedDelivery": null,
+        "deliveredDate": null,
+        "product": {
+            "name": "Core Memory Globe 10",
+            "variant": "Joy",
+            "price": 1199,
+            "qty": 5,
+            "image": "/images/default-product.png"
+        }
+    },
+    {
+        "status": "In-Transit",
+        "expectedDelivery": "25 Mar - 26 Mar",
+        "deliveredDate": null,
+        "product": {
+            "name": "Core Memory Globe 11",
+            "variant": "Fear",
+            "price": 899,
+            "qty": 2,
+            "image": "/images/default-product.png"
+        }
+    },
+    {
+        "status": "In-Transit",
+        "expectedDelivery": "28 Mar - 30 Mar",
+        "deliveredDate": null,
+        "product": {
+            "name": "Core Memory Globe 12",
+            "variant": "Sadness",
+            "price": 999,
+            "qty": 3,
+            "image": "/images/default-product.png"
+        }
+    }
+]

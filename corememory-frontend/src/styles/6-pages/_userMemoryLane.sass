@@ -1,0 +1,210 @@
+@use '../1-helpers/variables' as v
+@use '../3-basics/typography' as t
+
+.container
+  display: flex
+  align-items: center
+  justify-content: center
+  width: 100%
+  max-width: 90%
+  flex-direction: column
+  position: relative
+  top: 2rem
+
+  .header-container
+    display: flex
+    align-items: center
+    justify-content: space-between
+    width: 95%
+    max-width: 104.125rem
+    margin: 0 auto
+    position: relative  
+    padding-bottom: 1rem  
+
+    .title
+      @extend .heading-3
+      font-size: 1.77rem
+
+    .icon-container
+      display: flex
+      align-items: center
+      justify-content: center
+      width: 100%
+      max-width: 7.37rem
+      height: 2rem
+      border: 1px solid v.$black
+      border-radius: 3rem
+      overflow: hidden
+
+      .icon
+        display: flex
+        align-items: center
+        justify-content: center
+        flex: 1
+        cursor: pointer
+        transition: background 0.3s ease, color 0.3s ease
+        height: 100%
+        
+        &.active
+          background: #C2E7FF
+
+      .divider
+        width: 1px
+        height: 100%
+        background: v.$black
+
+      .icon-1, .icon-2
+        height: 100%
+        display: flex
+        align-items: center
+        justify-content: center
+      
+      .icon-1
+        font-size: 1.2rem
+
+      .icon-2
+        font-size: 1rem
+  
+  .contents-container
+    display: flex
+    width: 100%
+    height: 30rem
+    // border: 1px solid v.$red  // Guide line
+    border-radius: 0.5rem
+    overflow: hidden
+      
+  .table-container
+    width: 100%
+    display: flex
+    flex-direction: column
+    padding: 0.5rem 2rem
+
+    .table-wrapper
+      width: 100%
+      max-height: 700px
+      overflow-y: auto
+      border-radius: 8px
+      scrollbar-width: none
+      -ms-overflow-style: none
+
+      &::-webkit-scrollbar
+        display: none
+
+    .memory-table
+      width: 100%
+      min-width: 50rem
+      border-collapse: collapse
+      background-color: v.$white
+
+      thead th, tbody td
+        border-bottom: 1px solid #E2E2E2
+        background-color: transparent 
+
+      thead
+        position: sticky
+        top: 0
+        z-index: 10
+        // box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08)
+
+        th
+          @extend .heading-5
+          font: t.$font-inter-tight
+          font-size: 0.875rem
+          font-weight: 500
+          padding: 1.3rem 1.5rem
+          text-align: left
+          white-space: nowrap
+
+      tbody
+        cursor: pointer
+        tr
+          &:nth-child(even)
+            background-color: v.$white
+
+          &:hover
+            background-color: rgba(0, 0, 0, 0.05)
+
+        td
+          @extend .heading-5
+          font: t.$font-inter-tight
+          font-size: 0.875rem
+          font-weight: 400
+          padding: 0.5rem 2rem
+          text-align: left
+          white-space: nowrap
+
+          .variant-circle
+            display: inline-block
+            width: 20px
+            height: 20px
+            border-radius: 50%
+            border: 1px solid v.$black
+
+// Responsive Styles
+@media (max-width: 576px)
+  .container
+    top: 2rem  // Reduced top spacing for mobile
+    
+  .header-container
+    padding-bottom: 1.5rem  // Adjusted padding for mobile
+    margin-bottom: 1rem
+
+@media (min-width: 577px) and (max-width: 768px) // Tablet (Small)
+  .container
+    padding: 2rem
+
+  .header-container
+    margin-bottom: 2rem
+    padding-bottom: 2rem
+
+  .contents-container
+    height: auto
+    
+  .table-container
+    padding: 0 2rem
+
+@media (min-width: 769px) and (max-width: 1024px) // Tablet (Large) / Small Laptops
+  .header-container
+    padding-bottom: 2.5rem
+    
+  .title
+    font-size: 1.75rem
+
+  .icon-container
+    max-width: 6.5rem
+
+  .table-container
+    padding: 1.5rem
+
+  .memory-table
+    width: 100%
+    min-width: 80rem
+      
+@media (min-width: 1440px) and (min-height: 735px) // Extra Large Screens (4K & beyond)
+  .container
+    max-width: 90rem
+    top: 0
+
+  .header-container
+    width: 100%
+    max-width: 104.125rem
+    padding-bottom: 3rem
+
+  .contents-container
+    display: flex
+    width: 100%
+    height: 40rem
+     
+@media (width: 1536px) and (height: 735px)
+  .container 
+    max-width: 90rem
+    
+  .header-container
+    padding-bottom: 3rem
+    margin-bottom: 2rem
+    width: 100%
+    max-width: 90rem
+
+  .memory-table
+    width: 100%
+    max-width: 90rem

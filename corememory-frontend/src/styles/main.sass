@@ -1,0 +1,43 @@
+//* Main entrypoint (imports everything)
+//! Always import yung nilalagay niyo sa styles folder dito
+
+// 1 - Helpers
+@use '1-helpers/variables'
+@use '1-helpers/mixins'
+
+// 2 - Tools
+@use '2-tools/fonts'
+@use '2-tools/toast'
+
+// 3 - Basics
+@use '3-basics/base'
+@use '3-basics/background'
+@use '3-basics/typography'
+
+// 4 - Layout
+@use '4-layout/user-header'
+
+// 5 - Modules
+@use '5-modules/landingPage-module'
+@use '5-modules/general-module'
+@use '5-modules/accountSetupForm-module'
+@use '5-modules/trackOrder-module'
+@use '5-modules/cardPaymentInfo-module'
+@use '5-modules/paymentMethodSelector-module'
+@use '5-modules/productList-module'
+@use '5-modules/purchaseDetails-module'
+@use '5-modules/totalPriceDetails-module'
+@use '5-modules/uploadForm-module'
+@use '5-modules/qrCodeModal'
+
+// 6 - Pages
+@use '6-pages/userDashboard'
+@use '6-pages/userMemoryLane'
+@use '6-pages/userTrackOrder'
+@use '6-pages/userOrderPlaced'
+@use '6-pages/userChangePassword'
+@use '6-pages/userCreateCoreMemory'
+@use '6-pages/userOrderDetails'
+@use '6-pages/userCheckout'
+@use '6-pages/userProfile'
+@use '6-pages/forgotPassword'

@@ -1,0 +1,200 @@
+@use '../1-helpers/variables' as v
+@use '../3-basics/typography' as t
+
+.navbar 
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin: 0 auto
+    width: 100%
+    padding: 2.125rem 4rem 1rem
+    top: 0
+    position: fixed
+    z-index: 1000
+    background: v.$white
+    box-shadow: 0 2px 1px rgba(0, 0, 0, 0.1)
+
+    &__logo 
+        .navbar__brand 
+            @extend .heading-3
+            font-weight: 800
+            text-decoration: none
+            background: linear-gradient(90deg, #D20404, #DF6A04)
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+
+    &__menu 
+        list-style: none
+        display: flex
+        gap: 80px
+        padding: 0
+        margin: 0
+
+        .navbar__item a
+            @extend .nav-menu
+            font-weight: 600
+            text-decoration: none
+            color: v.$black
+            position: relative
+            display: inline-block 
+            transition: all 0.3s ease-in-out
+
+            &.active, &:hover
+                color: v.$accent-red
+                text-decoration: none
+
+            &::after
+                content: ""
+                position: absolute
+                bottom: -9px
+                left: 50%
+                width: 0
+                height: 2px
+                background: v.$accent-red
+                border-radius: 2px
+                transition: width 0.3s ease-in-out, left 0.3s ease-in-out
+                transform: translateX(-50%)
+
+            &.active::after, &:hover::after
+                width: 50%
+
+    &__profile 
+        display: flex
+        align-items: center
+        gap: 1rem
+        cursor: pointer 
+        z-index: 1001
+        font-size: 1.6rem
+        
+.dropdown-container
+    display: flex
+    flex-direction: column
+    position: absolute
+    top: 85%
+    right: 4rem
+    width: 100%
+    max-width: 300px 
+    background-color: v.$white
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1)
+    border-radius: 32px
+    z-index: 1001
+    cursor: pointer
+    overflow: hidden
+
+    ul
+        list-style-type: none
+        padding: 0
+        margin: 0
+
+    li
+        text-decoration: none
+        padding: 0.75rem 1rem
+
+    .profile-item
+        display: flex
+        align-items: center
+        gap: 0.75rem
+        padding: 0.75rem 1.5rem
+        width: 100%
+        box-sizing: border-box
+
+        .dp-avatar
+            width: 40px
+            height: 40px
+            border-radius: 50%
+            object-fit: cover
+
+        .name-status-holder
+            display: flex
+            flex-direction: column
+            justify-content: center
+            gap: 0.7rem
+            flex-grow: 1
+            padding: 0.5rem 0 0 0
+
+            .profile-name
+                @extend .heading-5
+                font-weight: bold
+                font-size: 1rem
+            
+            .membership-status-holder
+                display: inline-block
+                width: fit-content
+
+                .member,
+                .regular
+                    display: flex
+                    align-items: center
+                    justify-content: center
+                    height: 19.88px
+                    border-radius: 1rem
+                    @extend .heading-5
+                    font: t.$font-inter-tight
+                    font-weight: 600
+                    font-size: 10px
+                    padding: 0.25rem 0.5rem
+                    text-align: center
+
+                .member
+                    border: 1px solid #E56312
+                    color: #E56312
+
+                .regular
+                    border: 1px solid v.$gray-light
+                    color: v.$gray-light
+
+        .profile-arrow-icon
+            right: 0
+            display: flex
+            font-size: 1.5rem
+            color: v.$gray-light
+    
+        &:hover 
+            background: #D9D9D9
+
+    .divider 
+        height: 1px
+        background-color: #D9D9D9
+        width: 100%
+    
+    .menu-item
+        display: flex
+        align-items: center
+        gap: 0.75rem 
+        padding: 1rem 2rem
+
+        .dp-change-pass, .dp-logout-icon
+            width: 24px
+            height: 24px
+            font-size: 1.5rem
+            color: #433D4B
+
+        .label
+            @extend .heading-5
+            font-weight: 500
+            font-size: 16px
+            color: #433D4B
+        
+        &:hover 
+            background: #D9D9D9
+
+.cart-icon-wrapper
+    position: relative
+    display: inline-block
+
+.cart-icon
+    font-size: 1.8rem
+    color: v.$gray-dark
+
+.cart-badge
+    font: 600 0.75rem 'Inter Tight', sans-serif;
+    position: absolute
+    top: -0.4rem
+    right: -0.5rem
+    background-color: v.$gray-dark
+    color: white
+    border-radius: 50%
+    padding: 0.2rem 0.45rem
+    display: flex
+    align-items: center
+    justify-content: center

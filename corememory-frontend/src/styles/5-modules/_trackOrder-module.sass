@@ -1,0 +1,453 @@
+@use '../1-helpers/variables' as v
+@use '../3-basics/typography' as t
+
+*,
+*::before,
+*::after
+  box-sizing: border-box
+
+.order-shipping-modal
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background: rgba(0, 0, 0, 0.6)
+    display: flex
+    justify-content: center
+    align-items: center
+    z-index: 1000
+            
+    .modal-container
+        display: flex
+        flex-direction: column
+        width: 100%  
+        max-width: 30rem  
+        height: auto
+        border-radius: 34.13px
+        background-color: #FFFFFF
+        align-items: center  
+
+        .header-order,
+        .shipping-info-header,
+        .user-details,
+        .product-info,
+        .product-total-info,
+        .order-payment,
+        .help-container,
+        .button-container
+            width: 100%
+            padding: 0.5rem 2rem 0.5rem 2rem
+
+        .header-order
+            display: flex
+            justify-content: space-between
+            align-items: center 
+            height: 3.125rem
+            border-radius: 34.13px 34.13px 0 0
+            background: linear-gradient(to right, #D0AC1A, #D26506)
+
+            .order-text
+                @extend .heading-5
+                font: t.$font-inter-tight
+                font-weight: 700
+                font-size: 1.1rem
+                color: v.$white
+                margin: 0
+                line-height: 3.125rem 
+
+            .order-details-close
+                color: v.$white
+                font-size: 1.5rem
+                cursor: pointer
+                margin: 0 
+                line-height: 3.125rem 
+
+
+        .shipping-info-header
+            display: flex
+            justify-content: space-between 
+            align-items: center 
+            background: linear-gradient(to right, #1E8B7E, #095E53)
+            gap: 0.5rem
+            height: 3.125rem
+            cursor: pointer
+            width: 100%
+
+            .icon
+                width: 2.3rem
+                height: auto
+
+            h4
+                @extend .heading-5
+                font: t.$font-inter-tight
+                font-weight: 600
+                color: v.$white
+                font-size: 0.75rem
+                margin-right: auto 
+
+            .forward-icon
+                font-size: 1.2rem
+                color: v.$white
+                margin-left: 3rem  
+
+        .user-details
+            display: flex
+            flex-direction: column  
+            padding: 0 2rem 1.5rem 2rem
+            gap: 0.25rem 
+            box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+            text-align: left
+
+            h4
+                @extend .heading-5
+                font: t.$font-inter-tight
+                font-weight: 600
+                font-size: 0.89rem
+                margin-bottom: 0.5rem 
+
+            .user-information-holder
+                display: flex
+                align-items: center  
+                gap: 0.5rem 
+
+                .location-icon
+                    font-size: 1.6rem
+                    color: v.$gray-light
+                    margin-top: 0.5rem
+
+                .user-name
+                    @extend .heading-5
+                    font: t.$font-inter-tight
+                    font-weight: 500
+                    font-size: 0.8rem  
+
+                .user-contact
+                    @extend .heading-5
+                    font: t.$font-inter-tight
+                    font-size: 0.7rem
+                    color: v.$gray-light
+                    font-weight: 400
+
+            .address-holder
+                display: flex
+                align-items: center
+                margin-left: 2rem  
+
+                .address
+                    @extend .heading-5
+                    font: t.$font-inter-tight
+                    font-weight: 400
+                    font-size: 0.6rem 
+
+        .solid-divider
+            width: 100%
+            max-width: 26.2rem
+            border: 0.5px solid #E2E2E2
+
+        .product-info
+            display: flex
+            align-items: center
+            gap: 1rem 
+            width: 100% 
+
+            .product-img
+                width: 4.5rem  
+                height: auto  
+                max-width: 100%  
+
+            .holder
+                flex-grow: 1  
+                text-align: left    
+
+                .product-price
+                    display: flex
+                    justify-content: space-between
+
+                    .product-name
+                        @extend .heading-5 
+                        font: t.$font-inter-tight
+                        font-weight: 600
+                        font-size: 0.9rem
+
+                    .product-price
+                        @extend .heading-5  
+                        font-size: 0.89rem
+                        text-align: right 
+                        font-weight: 600
+
+                .product-variant, .product-qty
+                    @extend .heading-5  
+                    font: t.$font-inter-tight
+                    color: v.$gray-light 
+                    font-weight: 500
+                    font-size: 0.7rem
+                    padding-top: 1rem  
+
+        .product-total-info
+            display: flex
+            flex-direction: column 
+            width: 100%
+            gap: 1.2rem
+
+            .subtotal-info-holder,
+            .shipping-info-holder,
+            .total-info-holder
+                display: flex
+                justify-content: space-between 
+                align-items: center  
+
+            .subtotal-info-holder, .shipping-info-holder, .total-info-holder, .taxes-text
+                flex-grow: 1
+                text-align: left  
+
+            div 
+                @extend .heading-5
+                font: t.$font-inter-tight
+                font-size: 0.7rem 
+                font-weight: 500  
+                color: v.$gray-dark
+            
+            .total-text
+                @extend .heading-5
+                font: t.$font-inter-tight
+                font-size: 0.9rem 
+                font-weight: 700
+                color: v.$gray-dark
+            
+            .taxes-text
+                @extend .heading-5
+                font: t.$font-inter-tight
+                font-size: 0.7rem 
+                font-weight: 400
+                color: v.$gray-dark
+
+            .subtotal-info-holder div:first-child,
+            .shipping-info-holder div:first-child,
+            .total-info-holder div:first-child
+                margin-right: 1rem  
+
+        .broken-divider
+            width: 100%
+            max-width: 26.2rem
+            border-top: 2px dashed #E2E2E2
+
+        .order-payment
+            display: flex
+            flex-direction: column 
+            width: 100%
+            gap: 1rem
+
+            .order-id-holder, .payment-method-holder
+                display: flex
+                justify-content: space-between 
+                align-items: center  
+            
+            .order-id, .order-id-ref, .payment-method, .payment-service
+                @extend .heading-5
+                font: t.$font-inter-tight
+                font-weight: 400
+                font-size: 0.7rem
+                color: v.$gray-light
+
+        .help-container
+            display: flex
+            justify-content: space-between
+            align-items: center
+            background: #F9F8F7
+            height: 35px
+            width: 100%
+
+            .q-icon, .f-icon
+                font-size: 1rem
+                color: v.$gray-light 
+            
+            .f-icon
+                cursor: pointer
+
+            .help-text
+                @extend .heading-5
+                font-size: 0.8rem
+                font-weight: 600
+                color: v.$gray-light
+                margin-right: 18rem  
+
+        .button-container
+            display: flex
+            justify-content: space-between
+            gap: 0.5rem
+            padding-bottom: 1.3rem
+
+            .return-refund-button
+                width: 100%
+                max-width: 12.87rem
+                height: 2.74rem
+                border-radius: 3rem
+                border: 1px solid v.$gray-light
+                @extend .heading-5
+                color: v.$gray-light
+                background: v.$white
+                cursor: pointer
+            
+            .rate-button
+                width: 100%
+                max-width: 12.87rem
+                height: 2.74rem
+                border-radius: 3rem
+                border: 1px solid v.$gray-light
+                background: #EAE7E4
+                @extend .heading-5
+                color: v.$gray-light
+                cursor: pointer
+        
+        //* SHIPPING INFORMATION *//
+
+        .shipping-header-modal, .shipping-progress-container, .courier-information
+            width: 100%
+            padding: 0.5rem 2rem 0.5rem 2rem
+        
+        .shipping-header-modal
+            display: flex
+            justify-content: space-between
+            align-items: center // Vertically center the text and close button
+            height: 3.125rem
+            border-radius: 34.13px 34.13px 0 0
+            background: linear-gradient(to right, #1E8B7E, #095E53)
+            width: 100%
+
+            .shipping-header-text
+                @extend .heading-5
+                font: t.$font-inter-tight
+                font-weight: 700
+                font-size: 1.1rem
+                color: v.$white
+                margin: 0 
+                line-height: 3.125rem 
+
+            .shipping-close
+                color: v.$white
+                font-size: 1.5rem
+                cursor: pointer
+                margin: 0 
+                line-height: 3.125rem 
+
+
+        .shipping-progress-container
+            display: flex
+            flex-direction: column
+            align-items: center
+            padding: 1.5rem 2rem 1rem 2rem
+            gap: 1.5rem
+            box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1)
+            text-align: left
+            width: 100%
+            // border: 1px solid v.$red  // Guide line
+
+            .shipping-expected-delivery
+                @extend .heading-5
+                font: t.$font-inter-tight
+                font-weight: 700
+                font-size: 0.89rem
+                color: #1E8B7E
+
+            .progress-tracker
+                position: relative
+                width: 100%
+                height: 3rem
+                max-width: 25rem
+
+                .progress-stepper-label
+                    @extend .heading-5
+                    font: t.$font-inter-tight
+                    font-size: 0.7rem
+                    font-weight: 400
+                    text-align: center
+                    margin-top: 5px
+                    color: #1E8B7E
+
+                .progress-stepper-label-active 
+                    font-weight: 700
+                    color: #1E8B7E
+        
+        .shipping-status-details
+            // border: 1px solid v.$red  // Guide line
+            display: flex
+            width: 100%
+            align-items: center
+            padding: 1.5rem 2rem
+            flex-direction: column
+            box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1)
+
+            .shipping-status-placeholder
+                display: flex
+                justify-content: space-between
+                width: 100%
+                align-items: center  
+                gap: 0.5rem
+
+                .date-time-holder
+                    display: flex
+                    flex-direction: column
+                    gap: 1rem  
+                    padding: 1rem
+
+                    .date-time
+                        @extend .heading-5
+                        font-weight: 300
+                        font: t.$font-inter-tight
+                        font-size: 0.75rem
+                        color: v.$black
+    
+                .shipping-status-text
+                    @extend .heading-5
+                    font: t.$font-inter-tight
+                    font-size: 0.75rem
+                    color: v.$gray-light
+                    max-width: 100%  
+                    text-align: left
+                    flex: 1
+
+        .courier-information
+            display: flex
+            width: 100%
+            // border: 1px solid v.$red  // Guide line
+            justify-content: space-between
+            padding: 1rem 2rem
+
+            .delivery-product-image
+                width: 3rem
+                height: auto
+                max-width: 100%
+            
+            .delivery-details
+                display: flex
+                justify-content: center
+                flex-direction: column
+                gap: 1rem
+                margin-right: 10rem  
+                text-align: left
+
+                .courier-text
+                    @extend .heading-5
+                    font: t.$font-inter-tight
+                    font-size: 1rem
+                    font-weight: 500
+
+                .delivery-order-id
+                    @extend .heading-5
+                    font: t.$font-inter-tight
+                    font-size: 0.8rem
+                    font-weight: 500
+                    color: v.$gray-light
+            
+            .order-details-button
+                width: 100%
+                max-width: 7rem
+                height: 2.74rem
+                border-radius: 1rem
+                border: 1px solid v.$gray-light
+                @extend .heading-5
+                color: v.$gray-light
+                background: transparent
+                cursor: pointer
+         

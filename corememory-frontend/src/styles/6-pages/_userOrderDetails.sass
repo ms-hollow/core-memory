@@ -1,0 +1,111 @@
+@use '../1-helpers/variables' as v
+@use '../3-basics/typography' as t
+
+.orderDetails
+    display: flex
+    flex-direction: column
+    margin-top: 6.125rem  // 98px
+    padding-bottom: 4.5rem  // 72px 
+
+    h1
+        font-family: t.$font-inter-tight
+        font-weight: t.$weight-bold
+        font-size: 1.901rem  // 30.41px 
+        margin: 0
+        margin-bottom: 2.125rem  // 34px 
+        text-align: center
+    
+    &__form
+
+        .inputs
+            display: flex
+            flex-direction: column
+            gap: 0.5rem  // 8px 
+
+            .groupInputs
+                display: flex
+                flex-direction: row
+                gap: 0.520rem  // 8.33px 
+            
+            input
+                padding: 0.972rem 1.209rem  // 15.55px 19.34px
+                border-radius: 0.705rem  // 11.29px 
+                font-family: t.$font-inter-tight
+                font-weight: t.$weight-medium
+                font-size: 0.844rem  // 13.5px 
+                color: #737373
+                background-color: #F9F8F7
+                border: 0.061rem solid #737373  // 0.97px 
+
+                &:focus
+                    border: 0.061rem solid #1E1E1E
+                    color: #1E1E1E
+
+            .order-detail-location-input
+                padding: 0.972rem 1.209rem  // 15.55px 19.34px
+                border-radius: 0.705rem  // 11.29px 
+                background-color: #F9F8F7
+                border: 0.061rem solid #737373  // 0.97px 
+
+                &:focus
+                    border: 0.061rem solid #1E1E1E
+                    color: #1E1E1E
+
+                .order-detail-location-select
+                    width: 100%
+                    font-family: t.$font-inter-tight
+                    font-weight: t.$weight-medium
+                    font-size: 0.844rem  // 13.5px 
+                    color: #737373
+                    border: none
+
+            .contactInputField
+                padding: 0.972rem 1.209rem  // 15.55px 19.34px 
+                padding-left: 4.375rem  // 70px 
+                width: 28.372rem  // 450.54px 
+                height: 2.916rem  // 46.65px 
+                border-radius: 0.705rem  // 11.29px 
+                font-family: t.$font-inter-tight
+                font-weight: t.$weight-medium
+                font-size: 0.844rem  // 13.5px 
+                color: #737373
+                background-color: #F9F8F7
+                border: 0.061rem solid #737373  // 0.97px 
+
+                &:focus
+                    border: 0.061rem solid #1E1E1E
+                    color: #1E1E1E
+
+            .contactInputButton
+                padding-left: 0.584rem  // 9.34px 
+                padding-right: 0.625rem  // 10px 
+                border: none
+                border: 0.061rem solid #737373  // 0.97px 
+                background: none
+                border-top-left-radius: 0.705rem  // 11.29px 
+                border-bottom-left-radius: 0.705rem  // 11.29px 
+                border-top: 0.061rem solid #737373  // 0.97px 
+                border-bottom: 0.061rem solid #737373  // 0.97px 
+
+    &__buttons
+        display: flex
+        flex-direction: row
+        gap: 0.381rem  // 6.11px 
+        margin-top: 2.125rem  // 34px 
+        justify-content: center
+
+        button
+            width: 13.653rem  // 218.44px 
+            padding-top: 0.731rem  // 11.69px 
+            padding-bottom: 0.731rem  // 11.69px 
+            border-radius: 1.938rem  // 31.01px
+            border: 0.059rem solid #1E1E1E  // 0.94px 
+            font-family: t.$font-inter-tight
+            font-weight: t.$weight-bold
+            font-size: 0.989rem  // 15.83px 
+            background-color: #F9F8F7
+            cursor: pointer
+
+        .next
+            background-color: #EABD08
+            color:  #F9F8F7

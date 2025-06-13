@@ -1,0 +1,148 @@
+@use '../1-helpers/variables' as variables
+@use '../3-basics/typography'
+
+.landing-header 
+  display: flex
+  justify-content: space-between
+  align-items: center
+  padding: 1.5rem 3rem
+
+  &__button 
+    @extend .heading-5
+    font-size: 0.865rem
+    color: variables.$white
+    width: 6.4rem
+    height: 1.73rem
+    padding: 0.5rem 1rem
+    border-radius: 2.05rem
+    border: 0.125rem solid variables.$white
+    background-color: transparent
+    display: flex
+    justify-content: center
+    align-items: center
+    cursor: pointer
+    text-decoration: none
+    margin-right: 2rem
+    
+    &:hover 
+      transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out, transform 0.3s ease-in-out
+      background-color: variables.$white
+      color: variables.$accent-orange
+
+  &__title 
+    @extend .special-text
+    font-size: 1.0625rem
+    padding: 0.5rem 1rem
+    text-align: center
+    color: variables.$white
+
+.tagline 
+  @extend .title-text
+  font-size: 3.676rem
+  color: variables.$white
+  text-align: center
+  width: 50%
+  margin: 6.228rem auto 2.336rem
+
+.get-started 
+  @extend .getStarted-text
+  font-size: 0.994rem
+  display: flex
+  align-items: center
+  background-color: transparent
+  color: variables.$white
+  border: 0.1875rem solid variables.$white
+  padding: 1.178rem 4.74rem
+  border-radius: 2.97rem
+  margin: 0 auto
+  gap: 0.4375rem
+  cursor: pointer
+
+  &:hover 
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, transform 0.3s ease-in-out
+    background-color: variables.$white
+    color: variables.$accent-orange
+
+$white-gradient-1: radial-gradient(circle at 80% 10%, rgba(255, 255, 255, 0.75) 0%, rgba(255, 255, 255, 0) 50%)
+$yellow-gradient-1: radial-gradient(circle 25rem at -1% 90%, variables.$yellow 18%, rgba(0, 0, 0, 0) 100%)
+$yellow-gradient-2: radial-gradient(circle 20rem at 90% -2%, variables.$accent-orange -10%, rgba(0, 0, 0, 0) 100%)
+$red-gradient-1: radial-gradient(circle at 65% 140%, variables.$red -30%, rgba(0, 0, 0, 0) 100%);
+$orange-gradient-2: radial-gradient(circle 31.25rem at 5% 10%, variables.$accent-orange 5%, rgba(0, 0, 0, 0) 100%)
+
+.sphere 
+  position: relative
+  width: min(50.926rem, 90vw)
+  height: calc(min(50.926rem, 90vw) / 2)
+  border-radius: 50.926rem 50.926rem 0 0
+  background:  $yellow-gradient-1, $yellow-gradient-2, $red-gradient-1, $orange-gradient-2, variables.$accent-yellow
+  margin: auto
+  margin-top: 8.625rem
+  overflow: "hidden"
+  clipPath: "circle(50% at center)"
+
+.sphere::before 
+  content: ""
+  position: absolute
+  width: min(58.272rem, 90vw)
+  height: calc(min(58.272rem, 90vw) / 2)
+  border-radius: 58.272rem 58.272rem 0 0
+  border: 0.5px solid rgba(255, 255, 255, 0.2)
+  background: $white-gradient-1, $yellow-gradient-1, rgba(255, 255, 255, 0.06)
+  backdrop-filter: blur(3.125rem)
+  -webkit-backdrop-filter: blur(3.125rem)
+  z-index: 1
+  left: 50%
+  transform: translateX(-50%)
+  box-shadow: 0rem 6.25rem 15.625rem rgba(0, 0, 0, 0.16)
+
+
+/* Media Queries */
+@media (max-width: 1024px) // Tablets
+  .landing-header
+    padding: 1rem 2rem 
+  
+  .landing-header__button
+    width: auto 
+    margin-right: 1rem 
+
+  .landing-header__title
+    font-size: 1.5rem 
+
+@media (max-width: 768px) 
+  .landing-header
+    padding: 1rem 1.5rem 
+  
+  .landing-header__button
+    width: auto 
+    margin-right: 1rem 
+
+  .landing-header__title
+    font-size: 1.3rem 
+
+@media (max-width: 480px) 
+  .landing-header
+    padding: 1rem 
+    gap: 1rem
+  
+  .landing-header__button
+    width: 100% 
+    max-width: 7rem
+    margin-right: 1rem
+    font-size: 0.8rem
+  
+  .landing-header__title
+    font-size: 1.1rem
+    text-align: left 
+
+@media (max-width: 360px)
+  .landing-header
+    padding: 0.5rem 
+  
+  .landing-header__button
+    width: 100% 
+    max-width: 7rem
+    margin-right: 1rem
+  
+  .landing-header__title
+    font-size: 1rem 
+    text-align: left 

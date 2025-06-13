@@ -1,0 +1,59 @@
+@use '../1-helpers/variables' as v
+@use '../3-basics/typography' as t
+
+.cardInfo
+
+    label
+        font-family: t.$font-inter-tight
+        font-weight: t.$weight-semibold
+        font-size: 0.7rem
+
+    input
+        font-family: t.$font-inter-tight
+        font-weight: t.$weight-medium
+        font-size: 0.7rem
+        border: none
+        background-color: #F9F8F7
+
+        &:focus
+            outline: none
+            color: #1E1E1E
+
+    .label-input
+        display: flex
+        flex-direction: column
+        padding: 0.83rem 0.94rem
+        margin: 0
+
+    .exp-cvc
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+
+        .cvc
+            display: flex
+            flex-direction: row
+            align-items: center
+            border-left: 0.04rem solid #DBDBDB
+
+            img
+                width: 1.75rem
+                height: 1.31rem
+                padding-right: 0.94rem
+
+    &__cardNumber
+        display: flex 
+        flex-direction: row
+        justify-content: space-between
+        border-bottom: 0.04rem solid #DBDBDB
+
+        .acceptedCards
+            display: flex
+            flex-direction: row
+            align-items: center
+            padding-right: 0.94rem
+            gap: 0.1rem
+
+            img
+                width: 2.25rem
+                height: 1.25rem

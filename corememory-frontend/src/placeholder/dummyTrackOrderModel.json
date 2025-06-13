@@ -1,0 +1,28 @@
+{
+    "orderDetails": {
+        "status": "In Transit",
+        "expectedDelivery": "25 Mar - 26 Mar",
+        "shippingFee": "₱ 340.00",
+        "user": {
+            "name": "John Doe",
+            "contact": "(+63) 912-345-6789",
+            "address": "123 Rizal St., Brgy. Santo Niño, Quezon City, Metro Manila, 1100"
+        },
+        "product": {
+            "name": "Core Memory Globe",
+            "variant": "Joy",
+            "price": "₱ 23,980.00",
+            "quantity": 20,
+            "imageUrl": "/images/default-product.png"
+        },
+        "totals": {
+            "subTotal": "₱ 23,980.00",
+            "total": "₱ 26,392.42",
+            "taxes": "₱ 2,378.42"
+        },
+        "payment": {
+            "method": "Gcash",
+            "orderId": "12345"
+        }
+    }
+}

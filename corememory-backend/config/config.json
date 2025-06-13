@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": "root",
+    "password": "admin",
+    "database": "core_memory_dev_db",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+  "test": {
+    "username": "root",
+    "password": "admin",
+    "database": "core_memory_test_db",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+  "production": {
+    "username": "root",
+    "password": "admin",
+    "database": "core_memory_prod_db",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  }
+}

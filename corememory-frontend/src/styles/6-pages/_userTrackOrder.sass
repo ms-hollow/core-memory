@@ -1,0 +1,259 @@
+@use '../1-helpers/variables' as v
+@use '../3-basics/typography' as t
+
+.track-order
+    display: flex
+    flex-direction: column 
+    align-items: center 
+    text-align: center 
+    padding: 0 2rem
+    width: 100%
+    margin-top: 10rem
+    
+    .track-order-header
+        display: flex
+        max-width: 52rem
+        width: 100%
+        // border: 1px solid v.$red  // Guide line
+        flex-direction: column
+
+
+        .title
+            @extend .heading
+            font-weight: 600
+            font-size: 2rem
+            margin: 0 0 1rem 0
+            top: 1.5rem
+
+        .page-holder
+            display: flex
+            align-items: center
+            justify-content: space-between
+            width: 100% 
+
+            .page-wrapper
+                display: flex
+                justify-content: flex-end
+            
+                .page-text
+                    @extend .heading-5
+                    font-weight: 400
+                    font-size: 0.8rem
+                
+                .page-icon
+                    font-size: 1rem
+
+                .page-dropdown 
+                    @extend .heading-5
+                    font-weight: 500
+                    font-size: 0.8rem
+                    background-color: v.$white
+                    border: none
+                    cursor: pointer
+
+            .search
+                position: relative
+                display: flex
+                align-items: center
+                width: 20rem
+                margin-bottom: 1rem
+
+            .search-input
+                @extend .heading-5
+                font: t.$font-inter
+                font-weight: 400
+                font-size: 0.9rem
+                width: 100%
+                height: 2rem
+                border: 1px solid v.$gray-light
+                padding: 0.1rem 3rem 0.1rem 2.5rem
+                border-radius: 35px
+                background-color: v.$white
+
+            .search-icon
+                position: absolute
+                left: 1rem
+                top: 50%
+                transform: translateY(-50%)
+                font-size: 1.5rem
+                color: v.$gray-light
+
+    &__solid
+        border-top: 1px solid #E2E2E2
+        width: 100% 
+        margin: 0 0 1rem 0
+
+    &__container
+        // border: 1px solid v.$red //Guide line
+        display: flex
+        flex-direction: column 
+        align-items: center
+        gap: 0.5rem
+        width: 100%
+        max-width: 80rem
+        height: auto
+       
+        // Hide scrollbar for WebKit browsers (Chrome, Edge, Safari)
+        &::-webkit-scrollbar
+            width: 0
+            height: 0
+            display: none
+
+        // Hide scrollbar for Firefox
+        scrollbar-width: none
+
+        // Hide scrollbar for IE & Edge
+        -ms-overflow-style: none
+
+        .order-card
+            display: flex
+            flex-direction: column
+            border: 0.5px solid v.$gray-light
+            border-radius: 1rem
+            padding: 1rem
+            width: 100% 
+            max-width: 70% 
+            height: 11.3rem  
+
+            &__header
+                display: flex
+                align-items: center
+                justify-content: space-between
+                background: linear-gradient(to right, #1E8B7E, #095E53)
+                padding: 1.5rem
+                border-radius: 0.5rem
+                color: white
+                font-weight: bold
+                height: 2.5rem
+                cursor: pointer
+
+                .order-details 
+                    display: flex
+                    align-items: center
+                    gap: 1rem 
+                    flex-grow: 1
+
+                    .order-icon
+                        width: 2rem
+                        height: auto
+
+                    .info
+                        display: flex
+                        flex-direction: column
+                        text-align: left
+                        gap: 1rem 
+
+                        .header
+                            @extend .heading-5
+                            font: t.$font-inter-tight
+                            font-size: 0.89rem
+
+                        .sub-header
+                            @extend .heading-5
+                            font: t.$font-inter-tight
+                            font-size: 0.65rem
+                            font-weight: 400
+                    
+                .forward-icon
+                    font-size: 1.5rem
+                    cursor: pointer
+
+            .product-container
+                display: flex
+                width: 100%
+                justify-content: space-between
+                position: relative
+                cursor: pointer
+
+                .product-desc    
+                    display: flex
+                    align-items: center
+                    gap: 1rem 
+
+                    &__product-image
+                        width: 4.5rem
+                        height: auto
+                        max-width: 100% 
+                        margin: 0.5rem 0 0 0.1rem
+
+                    &__product-info
+                        flex-grow: 1
+                        text-align: left
+                        margin: 0.5rem 0 0 0
+
+                        h2
+                            @extend .heading-4
+
+                        h3
+                            @extend .heading-5
+                            font-size: 1rem
+                            font-weight: 600
+
+                        h4, span
+                            @extend .heading-5
+                            color: v.$gray-light
+                            font-weight: 500
+                
+                .qty-total-holder
+                    display: flex
+                    flex-direction: column
+                    text-align: right
+                    position: absolute
+                    bottom: -1.2rem  
+                    right: 0  
+
+                    .product-qty
+                        @extend .heading-5
+                        color: v.$gray-light
+                        font-weight: 500
+                        font-size: 0.8rem
+                    
+                    .order-total
+                        @extend .heading-4
+                        text-align: right
+                    
+
+//Responsive Styles
+@media (max-width: 576px)
+
+@media (min-width: 577px) and (max-width: 768px) // Tablet (Small)
+
+@media (min-width: 769px) and (max-width: 1024px) // Tablet (Large) / Small Laptops
+
+@media (min-width: 1441px) and (min-height: 735px) // Extra Large Screens (4K & beyond)
+    .track-order
+        margin-top: 0
+        padding: 8.5rem 2rem
+    
+    .track-order-header
+        max-width: 54.5rem
+        width: 100%
+
+    .track-order__container
+        max-height: 60vh
+        overflow-y: auto
+        padding: 1rem 1rem 0 1rem 
+    
+    .track-order__solid
+        width: 100% 
+        margin: 0 0 1rem 0
+
+@media (width: 1536px) and (height: 735px) // Extra Large Screens (4K & beyond)
+    .track-order
+        margin-top: 10vh
+
+    .track-order__container
+        overflow-y: auto
+
+    .track-order__solid
+        width: 100% 
+        max-width: 63% 
+        margin: 0 0 1rem 0
+
+
+    
+
+
+
+    
+

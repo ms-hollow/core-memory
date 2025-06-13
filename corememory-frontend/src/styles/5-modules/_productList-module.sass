@@ -1,0 +1,42 @@
+@use '../1-helpers/variables' as v
+@use '../3-basics/typography' as t
+
+.product
+    display: flex
+    flex-direction: row
+    gap: 0.98rem
+    padding-bottom: 0.21rem
+
+    img
+        width: 5.29rem
+        height: 5.29rem
+    
+    &__details
+        display: flex
+        flex-direction: column
+        
+        .title-price
+            display: flex
+            justify-content: space-between
+            align-items: center
+            width: 20.07rem
+            margin: 0
+            padding: 0.77rem 0 0.18rem
+
+            h2, h4
+                font-family: t.$font-inter-tight
+                font-weight: t.$weight-semibold
+                margin: 0
+
+            h2
+                font-size: 0.9rem
+            
+            h4
+                font-size: 0.76rem
+        
+        p
+            font-family: t.$font-inter-tight
+            font-weight: t.$weight-medium
+            font-size: 0.6rem
+            color: #737373
+            margin: 0

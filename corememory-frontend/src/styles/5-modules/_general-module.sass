@@ -1,0 +1,468 @@
+@use '../1-helpers/variables' as variables
+@use '../3-basics/typography'
+
+.form
+  min-height: 100vh
+  display: flex
+  justify-content: center
+  align-items: center
+  padding: 2rem 
+  box-sizing: border-box
+  
+  &__form-container
+    width: 90%
+    max-width: 27.81rem
+    height: auto
+    border-radius: 34.13px
+    background-color: variables.$white
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3)
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    padding: 2rem 
+
+  &__icon
+    align-self: flex-end
+    font-size: 1.8rem
+    color: variables.$black
+    gap: 0.5rem
+    cursor: pointer
+    text-shadow: 0 0 4px variables.$black, 0 0 4px variables.$black
+
+  &__title
+    @extend .heading-1
+    font-size: 2rem
+    color: variables.$black
+    margin-bottom: 0.5rem
+    cursor: default
+    align-self: flex-start
+
+  &__subtitle
+    @extend .heading-4
+    font: typography.$font-rubik
+    color: variables.$gray-light
+    font-weight: typography.$weight-medium
+    margin-bottom: 1.5rem
+    cursor: default
+    align-self: flex-start
+
+  &__username-error, &__email-error
+    font: 400 12px 'Inter Tight', sans-serif;
+    color: variables.$red
+    display: block
+    margin-bottom: 0.5rem
+
+  &__form-label
+    @extend .body-5
+    font-weight: typography.$weight-light
+    margin-bottom: 0.25rem
+    cursor: default
+    flex-shrink: 0
+
+  &__input-wrapper
+    position: relative
+    box-sizing: border-box
+    width: 100%
+
+  &__form-input
+    width: 23.5rem       
+    padding: 0.75rem 3rem 0.75rem 1rem // Space for the icon
+    border-radius: 1rem
+    border: 1px solid variables.$gray-dark
+    font-size: 1rem
+    outline: none
+    transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out
+    margin-bottom: 0.5rem
+    margin-top: 0.5rem
+
+    &:focus
+      border-color: variables.$accent-orange
+      box-shadow: 0 0 8px rgba(108, 99, 255, 0.2)
+
+  &__eye-icon-wrapper
+    position: absolute
+    right: 1rem
+    top: 60%
+    transform: translateY(-50%)
+    height: 100%
+    display: flex
+    align-items: center
+    cursor: pointer
+    color: variables.$gray-dark
+    font-size: 1.2rem
+    background: none
+    border: none
+
+  &__eye-icon-wrapper-signup
+    position: absolute
+    right: 1rem
+    top: 60%
+    transform: translateY(-50%)
+    height: 100%
+    display: flex
+    align-items: center
+    cursor: pointer
+    color: variables.$gray-dark
+    font-size: 1.2rem
+    background: none
+    border: none
+
+  &__password-error
+    @extend .body-5
+    font-weight: typography.$weight-light
+    color: variables.$accent-orange-1
+    display: block  
+    margin-bottom: 0.25rem
+
+  &__eye-icon
+    position: absolute
+    right: 1rem
+    top: 50%
+    transform: translateY(-40.5%)
+    height: 100% 
+    display: flex
+    align-items: center 
+    cursor: pointer
+    color: variables.$gray-dark
+    font-size: 1.2rem
+
+  &__forgot-password
+    @extend .body-5
+    color: variables.$gray-dark
+    text-align: left
+    width: 100%
+    margin: 0 0 1rem 0
+    cursor: pointer
+
+  &__dont-have-account
+    @extend .body-5
+    color: variables.$gray-dark
+    display: flex
+    gap: 0.3rem
+    margin-top: 1rem
+    cursor: default
+    align-items: baseline
+    
+    .signup-link
+      color: variables.$accent-orange
+      text-decoration: none
+      cursor: pointer
+  
+  &__role-holder
+    display: flex
+    justify-content: center
+    gap: 1rem
+    flex-wrap: nowrap 
+    width: 100%
+  
+  .role-title-wrapper
+    align-self: flex-start
+
+  .box
+    display: flex
+    justify-content: center
+    align-items: center
+    gap: 0.5rem
+    border-radius: 1rem
+    border: 2px solid variables.$black
+    max-width: 12.9rem 
+    height: 8.5rem
+    cursor: pointer
+
+  .role-dont-have-account
+    @extend .body-5
+    color: variables.$gray-dark
+    display: flex
+    gap: 0.3rem
+    margin-top: 1rem
+    cursor: default
+    align-items: baseline
+
+  .role-signup-link
+    color: variables.$black
+    font-weight: typography.$weight-medium
+    text-decoration: underline
+    cursor: pointer
+
+  .role-container
+    display: flex
+    justify-content: center  // Centers everything
+    align-items: center
+    gap: 2rem // Adds space between roles
+    width: 100%
+
+  .role-wrapper
+    display: flex
+    flex-direction: column
+    align-items: center
+    text-align: center  // Ensures text is centered
+
+  .role
+    font-size: 4.5rem
+    color: variables.$black
+
+  .role-label
+    @extend .heading-4
+    color: variables.$black
+    margin-top: 0.5rem // Adds spacing between icon and text
+
+.button
+  width: 100%
+  max-width: 27.2rem
+  height: 3rem
+  border-radius: 2.52rem
+  border: 1.15px solid variables.$black
+  background-color: variables.$accent-yellow
+  cursor: pointer
+  box-shadow: 4px 5px 0 variables.$black
+
+  &__text
+    @extend .heading-4
+    color: variables.$white
+    font: typography.$font-rubik
+
+
+.signup-form
+  min-height: 100vh
+  display: flex
+  justify-content: center
+  align-items: center
+
+  .signup-form-container
+    width: 100%
+    max-width: 27.81rem
+    height: auto
+    border-radius: 34.13px
+    background-color: variables.$white
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3)
+    padding: 2rem
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+
+  .signup-icon
+    align-self: flex-end
+    font-size: 1.8rem
+    color: variables.$black
+    gap: 0.5rem
+    cursor: pointer
+    text-shadow: 0 0 4px variables.$black, 0 0 4px variables.$black
+
+  .signup-title
+    @extend .heading-1
+    font-size: 2rem
+    color: variables.$black
+    margin-bottom: 0.5rem
+    cursor: default
+    align-self: flex-start
+
+  .signup-subtitle
+    @extend .heading-4
+    font: typography.$font-rubik
+    color: variables.$gray-light
+    font-weight: typography.$weight-medium
+    margin-bottom: 1.5rem
+    cursor: default
+    align-self: flex-start
+
+  .signup-username-error, &__email-error
+    font: 400 12px 'Inter Tight', sans-serif;
+    color: variables.$red
+    display: block
+    margin-bottom: 0.5rem
+
+  .signup-form-label
+    @extend .body-5
+    font-weight: typography.$weight-light
+    margin-bottom: 0.25rem
+    cursor: default
+
+  .signup-input-wrapper
+    position: relative
+    // border: 1px solid variables.$red
+    box-sizing: border-box
+    width: 100%
+
+    .signup-form-input
+      width: 23.5rem         
+      padding: 0.75rem 3rem 0.75rem 1rem // Space for the icon
+      border-radius: 1rem
+      border: 1px solid variables.$gray-dark
+      font-size: 1rem
+      outline: none
+      transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out
+      margin-bottom: 0.5rem
+      margin-top: 0.5rem
+      box-sizing: border-box
+
+      &:focus
+        border-color: variables.$accent-orange
+        box-shadow: 0 0 8px rgba(108, 99, 255, 0.2)
+
+  .eye-icon-wrapper-signup
+    position: absolute
+    right: 1rem
+    top: 60%
+    transform: translateY(-50%)
+    display: flex
+    align-items: center
+    cursor: pointer
+    color: variables.$gray-dark
+    font-size: 1.2rem
+    background: none
+    border: none
+
+//* Logout Modal
+
+.logout-modal
+  display: flex
+  justify-content: center
+  align-items: center
+  position: fixed 
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0  
+  background-color: rgba(0, 0, 0, 0.3)  
+  z-index: 9999;
+
+  .logout-container
+    display: flex
+    flex-direction: column
+    width: 100%  
+    max-width: 25rem  
+    height: auto
+    border-radius: 34.13px
+    background-color: #FFFFFF
+    align-items: center  
+    // border: 1px solid variables.$red  // Guide line
+    padding: 2rem
+
+    .logout-icon-holder
+      position: relative
+      width: 8rem
+      height: auto
+      display: flex
+      justify-content: center
+      align-items: center
+      padding: 1rem
+
+      .logout-icon-img
+        width: 100%
+        height: 100%
+        object-fit: contain 
+
+    .logout-text-holder
+      display: flex
+      align-items: center
+      flex-direction: column
+      gap: 0.5rem
+      padding: 1rem
+
+      .logout-text-1
+        @extend .heading-2
+        font: typography.$font-inter-tight
+        font-weight: 700
+        font-size: 24.94px
+
+      .logout-text-2
+        @extend .heading-3
+        font: typography.$font-inter-tight
+        font-weight: 300
+        font-size: 17.85px
+    
+    .logout-button
+      width: 100%
+      max-width: 303.15px
+      height: 61.3px
+      border-radius: 2.52rem
+      background: variables.$black
+      cursor: pointer
+      font: typography.$font-inter-tight
+      font-size: 17.69px
+      color: variables.$white
+      @extend .heading-3
+      border: none
+    
+    .logout-cancel
+      @extend .heading-4
+      font-size: 17.69px
+      font-weight: 400
+      padding: 1rem 1rem 0 1rem
+      cursor: pointer
+
+@media (min-width: 360px) 
+  .logout-modal
+    padding: 1rem
+
+@media (max-width: 480px) // Mobile devices
+  .form__form-container
+    width: 90%
+    max-width: 20rem
+    height: auto
+    padding: 1rem
+    border-radius: 15px
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+
+  .form__title, .form__subtitle, .form__forgot-password
+    margin-bottom: 0
+  
+  .form__icon
+    font-size: 1.2rem
+
+  .form__title
+    font-size: 1.5rem
+
+  .form__subtitle, .form__form-label, .form__forgot-password, .form__dont-have-account
+    font-size: 0.8rem
+    padding: 1rem 0
+
+  .form__form-input
+    width: 100%
+    max-height: 2.5rem
+    height: auto
+    box-sizing: border-box
+    padding: 0.5rem 1rem
+    font-size: 0.9rem
+    margin-bottom: 0.5rem
+
+  .form__eye-icon-wrapper
+    top: 65%
+    font-size: 1rem
+  
+  .form__eye-icon
+    top: 80%
+    font-size: 1rem
+
+  .button
+    width: 100%
+    max-width: 20rem
+    height: 2.5rem
+    border-radius: 2rem
+    box-shadow: 3px 4px 0 variables.$black
+    font-size: 1rem
+    margin-top: 0
+
+  .button__text
+    font-size: 1rem
+
+  .form__dont-have-account
+    display: flex
+    gap: 0.3rem
+    margin-top: 0
+    cursor: default
+    align-items: baseline
+
+  .role
+    font-size: 1rem
+
+@media (max-width: 768px) // Tablets and smaller screens
+  .form__form-container
+    width: 95%
+    padding: 1.5rem
+    border-radius: 20px
