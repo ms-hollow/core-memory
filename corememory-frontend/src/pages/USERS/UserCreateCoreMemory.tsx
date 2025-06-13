@@ -18,11 +18,10 @@ const CreateCoreMemory: React.FC<CreateCoreMemoryModalProps> = ({
 }) => {
     const [activeStep, setActiveStep] = useState(0);
     const [uploadData, setUploadData] = useState({
-        videoTitle: "",
-        videoLink: "",
+        attach_item: "" as string | File,
+        type: "file" as "file" | "link",
+        title: "",
         description: "",
-        uploadMethod: "file" as "file" | "link",
-        selectedFile: null as File | null,
     });
 
     const [selectedVariant, setSelectedVariant] = useState<string | null>(

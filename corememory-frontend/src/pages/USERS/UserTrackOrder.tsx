@@ -14,7 +14,7 @@ const UserTrackOrder = () => {
     const [currentPage, setCurrentPage] = useState(1);
     const [totalPages, setTotalPages] = useState(1);
     const ordersPerPage = 5;
-    const [searchTerm, setSearchTerm] = useState("");
+    // const [searchTerm, setSearchTerm] = useState("");
 
     const fetchOrders = async () => {
         try {
@@ -53,7 +53,6 @@ const UserTrackOrder = () => {
 
     const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
         const value = e.target.value;
-        setSearchTerm(value);
 
         // If search term is empty, display all orders
         if (value.trim() === "") {

@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { MdArrowForwardIos } from "react-icons/md";
 import OrderDetails from "./OrderDetailsModal";
 import ShippingInformationModal from "./ShippingInformationModal";

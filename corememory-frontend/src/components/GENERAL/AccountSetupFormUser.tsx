@@ -29,7 +29,7 @@ const AccountSetupFormUser = () => {
         setFormData((prev) => ({ ...prev, [name]: value }));
     };
 
-    const handleContactNumChange = (value: string, data: {} | CountryData) => {
+    const handleContactNumChange = (value: string | CountryData) => {
         setFormData((prev) => ({
             ...prev,
             contact_number: value,

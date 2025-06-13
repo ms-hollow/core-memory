@@ -1,6 +1,6 @@
 import { Stepper, Step, StepLabel, StepConnector, styled } from "@mui/material";
 
-const CustomStepConnector = styled(StepConnector)(({ theme }) => ({
+const CustomStepConnector = styled(StepConnector)(() => ({
     [`& .MuiStepConnector-line`]: {
         transition: "all 0.3s ease",
         borderColor: "#C6C6C6",

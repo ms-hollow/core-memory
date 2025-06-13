@@ -8,7 +8,7 @@ import {
     getUserProfile,
     uploadProfilePicture,
 } from "../../apis/userApis";
-import PhoneInput, { CountryData } from "react-phone-input-2";
+import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
 import { getRegions, getCitiesByRegion } from "../../utils/LocationUtil";
 import { toast } from "react-toastify";
@@ -152,7 +152,7 @@ const UserEditProfile = () => {
         }));
     };
 
-    const handleContactNumChange = (value: string, data: {} | CountryData) => {
+    const handleContactNumChange = (value: string) => {
         setFormData((prev) => ({
             ...prev,
             contact_number: value,

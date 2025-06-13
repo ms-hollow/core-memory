@@ -47,14 +47,5 @@ const ListView = ({ data }: ListViewProps) => {
         </div>
     );
 };
-
-const GridView = ({ data }: ListViewProps) => {
-    return (
-        <div>
-            <div>GRID VIEW HERE</div>
-        </div>
-    );
-};
-
 // Exporting both components
-export { ListView, GridView };
+export { ListView };

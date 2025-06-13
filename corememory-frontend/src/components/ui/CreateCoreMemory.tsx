@@ -2,14 +2,14 @@ import { useState, useRef, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { FaArrowLeft } from "react-icons/fa";
 
-import CustomStepper from "../../components/UI/CustomStepper";
-import UserUpload from "../../components/USERS/UserUpload";
-import UserPurchaseDetails from "../USERS/UserPurchaseDetails";
+import CustomStepper from "./CustomStepper.tsx";
+import UserUpload from "../USERS/UserUpload.tsx";
+import UserPurchaseDetails from "../USERS/UserPurchaseDetails.tsx";
 
-import { useAuth } from "../../context/AuthContext";
-import { uploadAttachLink, uploadAttachFile } from "../../apis/core-memoryApis";
-import { createOrderDetail } from "../../apis/order-detailApis";
-import { addToCart } from "../../apis/cart-itemApis.ts";
+import { useAuth } from "../../context/AuthContext.tsx";
+import { uploadAttachLink, uploadAttachFile } from "../../apis/core-memoryApis.ts";
+import { createOrderDetail } from "../../apis/order-detailApis.ts";
+import { addToCart } from "../../apis/cart-itemApis.ts.ts";
 
 interface CreateCoreMemoryModalProps {
   isOpen: boolean;

@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
 import BackgroundWrapper from "../components/UI/BackgroundWrapper";
 import LandingPage from "../pages/GENERAL/LandingPage";
@@ -24,6 +25,7 @@ import { AuthProvider } from "../context/AuthContext";
 
 const AppRoutes = () => {
     const location = useLocation();
+    const [showCreateModal, setShowCreateModal] = useState(true);
 
     const showYellowBackground = [
         "/login",
@@ -38,7 +40,15 @@ const AppRoutes = () => {
     const protectedRoutes = [
         { path: "/dashboard", component: <UserDashboard /> },
         { path: "/order", component: <UserTrackOrder /> },
-        { path: "/create", component: <UserCreateCoreMemory /> },
+        {
+            path: "/create",
+            component: (
+                <UserCreateCoreMemory
+                    isOpen={showCreateModal}
+                    setShowModal={setShowCreateModal}
+                />
+            ),
+        },
         { path: "/order-placed", component: <UserOrderPlaced /> },
         { path: "/memory-lane", component: <UserMemoryLane /> },
         { path: "/order-details", component: <UserOrderDetails /> },

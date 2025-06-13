@@ -91,7 +91,7 @@ const ShippingInformationModal = ({
 
     if (!isOpen) return null;
 
-    const handleOrderDetailsModal = (order_data: Order) => {
+    const handleOrderDetailsModal = () => {
         setShippingInfoModal(false);
         setOrderDetailsModal(true);
     };
@@ -223,7 +223,7 @@ const ShippingInformationModal = ({
                     </div>
                     <button
                         className="order-details-button"
-                        onClick={() => handleOrderDetailsModal(order_data)}
+                        onClick={handleOrderDetailsModal}
                     >
                         Order Details
                     </button>

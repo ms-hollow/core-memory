@@ -28,7 +28,7 @@ const CustomStepIcon = (props: StepIconProps) => {
     );
 };
 
-const ShippingStepConnector = styled(StepConnector)(({ theme }) => ({
+const ShippingStepConnector = styled(StepConnector)(() => ({
     [`& .MuiStepConnector-line`]: {
         borderWidth: 3,
     },
